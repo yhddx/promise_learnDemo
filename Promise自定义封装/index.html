@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./promise.js"></script>
+</head>
+<body>
+    <script>
+        let p = new Promise((resolve, reject) => {
+            // setTimeout(() => {
+            //     resolve('ok')
+            //     // reject('err')
+            // }, 1000)
+                resolve('ok')
+                console.log('111');
+
+            // reject('err')
+            //抛出异常改变promise状态
+            // throw('err')
+        });
+
+
+    let res =  p.then((result) => {
+        console.log('222');
+        // return('Hello')
+        // return new Promise((resolve, reject) => {
+        //     resolve('success')
+        // })
+        // throw('FAIL')
+    }, (err) => {
+        console.log(err);
+    });
+
+    // p.then((result) => {
+    //     alert(result);
+    // }, (err) => {
+    //     console.log(err);
+    // });
+
+    console.log('333');
+
+    // let p1 = new Promise((resolve, reject) => {
+    //     setTimeout(() => {
+    //         resolve('ok');
+    //     })
+    // })
+    // let p2 = Promise.resolve('Success');
+    // let p3 = Promise.resolve('Oh Yeah');
+
+    // let result = Promise.race([p1, p2, p3]);
+    // console.log(result);
+    </script>
+</body>
+</html>

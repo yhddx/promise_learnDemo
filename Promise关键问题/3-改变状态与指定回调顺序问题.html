@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //指定回调：在then中放入成功或者失败状态，对应状态有特定的回调函数，对应关系，但没有实施
+        let p = new Promise((resolve, reject) => {
+            // resolve('ok') //1  同步任务
+            setTimeout(() => {
+                resolve('ok') //3    异步任务
+            }, 1000);
+        });
+
+        //2
+        p.then((result) => {
+            console.log(result);
+        }).catch((err) => {
+            
+        });
+    </script>
+</body>
+</html>
